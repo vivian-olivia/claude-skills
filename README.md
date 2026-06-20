@@ -27,6 +27,20 @@ Searches the web for the top 5 articles from a given week, formatted for the wee
 
 ---
 
+### `/project-weekly-report`
+
+Pulls live data from four GDP-ADMIN GitHub Projects and generates a weekly status report grouped by client/product.
+
+**Triggers:** `/project-weekly-report`, `bikin weekly report`, `generate weekly report`, `pull project status from GitHub`
+
+**Output:** Issues / Accomplishments / Next Actions, grouped by client (Telkomsel, DPRD Jatim, Gudang Garam, Meemo, Speech, etc.)
+
+**Data sources:** GitHub Projects 402 (GLAIR Leads), 398 (Product - Meemo), 441 (Speech & NLP), 223 (GL SDK Board) under `GDP-ADMIN` org. Reads issue bodies and comments — uses the most recent weekly update comment per issue as source of truth.
+
+**Does NOT:** Fetch calendar or articles — use `/weekly-calendar-report` or `/weekly-articles-search` for those.
+
+---
+
 ### `/weekly-calendar-report`
 
 Fetches accepted Google Calendar events for the report week and outputs a grouped meeting list.
